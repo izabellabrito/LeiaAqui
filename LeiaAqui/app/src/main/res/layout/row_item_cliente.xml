@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_cliente_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:paddingBottom="5dp"
+        android:text="@string/nome"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/tv_cliente_cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cliente_nome"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/cpf"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/tv_cliente_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cliente_cpf"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/categoria"
+        android:textSize="15sp" />
+    <Button
+        android:id="@+id/btn_editar_cliente"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edit" />
+    <Button
+        android:id="@+id/btn_deletar_cliente"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/btn_editar_cliente"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/delete" />
+    <Button
+        android:id="@+id/btn_detalhes_cliente"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/btn_deletar_cliente"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/more" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="18dp"
+        app:srcCompat="@drawable/portrait" />
+</RelativeLayout>

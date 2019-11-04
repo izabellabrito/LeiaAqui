@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LeiaAqui</string>
+    <!-- CAMPOS BOTTOM NAVIGATION -->
+    <string name="title_acervo">Acervo</string>
+    <string name="title_emprestados">Emprestados</string>
+    <!-- CAMPOS MENU -->
+    <string name="cadastro">Cadastro</string>
+    <string name="title_cadClientes">Clientes</string>
+    <string name="title_cadLivros">Livros</string>
+    <string name="title_cadLeitores">Leitores</string>
+    <string name="title_cadCategoriaLivros">Categoria de livros</string>
+    <string name="title_cadCategoriaLeitores">Categoria de leitores</string>
+    <!-- GENERICOS -->
+    <string name="titulo">Titulo</string>
+    <string name="cliente">Cliente</string>
+    <string name="data_retirada">Data de retirada</string>
+    <string name="previsao_devolucao">Previsão de devolução</string>
+    <string name="nome">Nome</string>
+    <string name="cpf">CPF</string>
+    <string name="categoria">Categoria</string>
+    <string name="editar">Editar</string>
+    <string name="deletar">Deletar</string>
+    <string name="codigo">Código</string>
+    <string name="descricao">Descrição</string>
+    <string name="multa">Multa</string>
+    <string name="numero_dias_maximo_emprestimo">Número de dias máximo que esse livro pode ser emprestado</string>
+    <string name="numero_dias_maximo_categoria">Número de dias máximo que essa categoria pode emprestar um livro</string>
+    <string name="autores">Autores</string>
+    <string name="editora">Editora</string>
+    <string name="copias">Cópias</string>
+    <string name="emprestar">Emprestar</string>
+    <string name="devolver">Devolver</string>
+    <string name="NenhumItemEmprestado">Nenhum livro emprestado no momento.</string>
+    <string name="NenhumItemaAcervo">Nenhum livro no acervo.</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="dataDevolucao">Data de devolução</string>
+    <string name="cadastro_realizado">Cadastro salvo com sucesso!</string>
+    <string name="outrasInformacoes">Outras informações</string>
+    <string name="ok">Ok!</string>
+    <string name="livroDuplicado">Parece que você já tem um livro com esse código, ao cadastrar esse livro somente será aumantado o número de cópias. Caso sejam livros diferentes, insira um código diferente.</string>
+    <string name="atencao">Atenção!</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="continuar">Continuar</string>
+    <string name="voltar">Voltar</string>
+    <string name="entrar">Entrar</string>
+    <string name="detalhes">Detalhes</string>
+    <string name="exluir_livro">Você tem certeza que deseja excluir esse livro?</string>
+    <string name="exluir_categoria">Você tem certeza que deseja excluir essa categoria?</string>
+    <string name="exluir_cliente">Você tem certeza que deseja excluir esse cliente?</string>
+    <string name="todasCopiasEmprestadas">Todas as cópias emprestadas</string>
+    <string name="copiasEmprestadas"> Cópia(s) disponível(is)</string>
+    <string name="copiasInsuficientes">Você não tem numeros de cópias suficiente!</string>
+    <string name="livroEmprestado">Você não pode deletar um livro que está emprestado no momento!</string>
+    <string name="deletar_categoria_usada">Você não pode deletar uma categoria que está sendo usada no momento!</string>
+    <string name="deletar_cliente_usado">Você não pode deletar esse cliente, possuí um ou mais livros emprestados para ele!</string>
+    <string name="livro_deletado">Livro deletado com sucesso!</string>
+    <string name="categoria_deletada">Categoria deletada com sucesso!</string>
+    <string name="cliente_deletado">Cliente deletado com sucesso!</string>
+    <string name="categoria_existente">Já existe uma categoria com esse código!</string>
+    <string name="cliente_existente">Já existe um cliente com esse cpf!</string>
+    <string name="nenhum_cliente">Nenhum cliente cadastrado</string>
+    <string name="nenhum_livro">Nenhum livro cadastrado</string>
+    <string name="nenhuma_categoria">Nenhuma categoria cadastrado</string>
+    <string name="escolherCliente">Você precisa escolher um cliente!</string>
+    <string name="escolherCategoria">Você precisa escolher uma categoria!</string>
+    <!-- EMPRÉSTIMO -->
+    <string name="livro_selecionado">Livro selecionado</string>
+    <string name="escolha_cliente">Escolha o cliente</string>
+    <string name="emprestimo_realizado">Empréstimo realizado com sucesso!</string>
+    <!-- DEVOLUÇÃO -->
+    <string name="devolucao_realizada">Devolução realizada com sucesso!</string>
+    <!-- EDICAO -->
+    <string name="edicao_realizada">Informações salvas com sucesso!</string>
+    <!-- CAMPOS CADASTRO LIVRO -->
+    <string name="ISBN">ISBN</string>
+    <string name="codigoCategoria">Código da categoria</string>
+    <string name="palavrasChave">Palavras-chave</string>
+    <string name="dataPublicacao">Data de publicação</string>
+    <string name="numeroEdicao">Número de edição</string>
+    <string name="numeroPaginas">Número de páginas</string>
+    <!-- CAMPOS CADASTRO CLIENTES -->
+    <string name="endereco">Endereço</string>
+    <string name="celular">Celular</string>
+    <string name="email">Email</string>
+    <string name="dataNascimento">Data de nascimento</string>
+    <string name="categoriaLeitor">Categoria do leitor</string>
+    <!-- CAMPOS CADASTRO CATEGORIA LIVROS -->
+    <string name="descricaoCategoria">Descrição da categoria</string>
+    <string name="numeroMax">Número máximo de dias que esse tipo de obra pode ficar emprestado</string>
+    <!-- CAMPOS CADASTRO CATEGORIA DE LEITORES -->
+    <string name="numDias">Número máximo de dias que essa categoria pode emprestar uma obra</string>
+    <!-- ERROS -->
+    <string name="erro_cadastro_categoria_leitores">Ocorreu um erro ao salvar a catergoria de leitores!</string>
+    <string name="erro_editar_categoria_leitores">Ocorreu um erro ao editar a catergoria de leitores!</string>
+    <string name="erro_cadastro_categoria_livros">Ocorreu um erro ao salvar a catergoria de livros!</string>
+    <string name="erro_editar_categoria_livros">Ocorreu um erro ao editar a catergoria de livros!</string>
+    <string name="erro_cadastro_cliente">Ocorreu um erro ao salvar o cliente!</string>
+    <string name="erro_editar_cliente">Ocorreu um erro ao editar o cliente!</string>
+    <string name="erro_cadastro_livro">Ocorreu um erro ao salvar o livro!</string>
+    <string name="erro_editar_livro">Ocorreu um erro ao editar o livro!</string>
+    <string name="erro_devolver_livro">Ocorreu um erro ao devolver esse livro!</string>
+    <string name="erro_emprestar_livro">Ocorreu um erro ao emprestar esse livro!</string>
+    <string name="erro_default">Ocorreu um erro ao iniciar os dados default!</string>
+    <string name="erro_obter_dados">Ocorreu um erro ao obter os dados!</string>
+</resources>

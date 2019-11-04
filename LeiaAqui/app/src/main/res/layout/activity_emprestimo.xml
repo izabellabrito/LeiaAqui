@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Livros.EmprestimoActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_emprestimo_livro"
+            android:layout_width="365dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/livro_selecionado" />
+        <TextView
+            android:id="@+id/tv_emprestimo_data"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/data_retirada" />
+        <TextView
+            android:id="@+id/tv_emprestimo_previsao"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/previsao_devolucao" />
+        <TextView
+            android:id="@+id/tv_emprestimo_multa"
+            android:layout_width="370dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/multa" />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tv_emprestimo_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/escolha_cliente"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/card"/>
+    <TextView
+        android:id="@+id/tv_escolher_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/tv_emprestimo_cliente"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="@string/categoria" />
+    <Spinner
+        android:id="@+id/spinner_emprestimo_cliente_categoria"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tv_emprestimo_cliente"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@+id/tv_escolher_categoria"
+        android:layout_toRightOf="@+id/tv_escolher_categoria" />
+    <TextView
+        android:id="@+id/tv_escolher_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/tv_escolher_categoria"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:text="@string/nome" />
+
+    <Spinner
+        android:id="@+id/spinner_emprestimo_cliente_nome"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/spinner_emprestimo_cliente_categoria"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@+id/tv_escolher_nome"
+        android:layout_toRightOf="@+id/tv_escolher_nome" />
+    <Button
+        android:id="@+id/btn_emprestar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#fff"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+        android:textSize="13.5sp"
+        android:textStyle="bold"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/emprestar" />
+</RelativeLayout>

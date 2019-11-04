@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.leiaaqui">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashSreenActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.Clientes.DetalhesClienteActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity android:name=".Activities.Livros.DetalhesLivroActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".EdicaoRealizadaActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".DevolucaoRealizadaActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".Activities.Livros.DevolucaoActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".EmprestimoRealizadoActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".Activities.Livros.EmprestimoActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity android:name=".LoginActivity"/>
+        <activity
+            android:name=".Activities.CategoriaLivros.CadastroCategoriaLivros"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".Activities.CategoriaLeitores.CadastroCategoriaLeitores"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".Activities.Livros.CadastroLivrosActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity android:name=".CadastroFinalizadoActivity" />
+        <activity
+            android:name=".Activities.Clientes.CadastroClientesActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".Activities.CategoriaLivros.CategoriaLivrosActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".Activities.CategoriaLeitores.CategoriaLeitoresActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".Activities.Livros.LivrosActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".Activities.Clientes.ClientesActivity"
+            android:theme="@style/AppTheme.DarkActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+    </application>
+</manifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_acervo">
+
+    <fragment
+        android:id="@+id/navigation_emprestados"
+        android:name="com.example.leiaaqui.Fragments.Emprestados.EmprestadosFragment"
+        android:label="@string/title_emprestados"
+        tools:layout="@layout/fragment_emprestados" />
+
+    <fragment
+        android:id="@+id/navigation_acervo"
+        android:name="com.example.leiaaqui.Fragments.Acervo.AcervoFragment"
+        android:label="@string/title_acervo"
+        tools:layout="@layout/fragment_acervo" />
+</navigation>
