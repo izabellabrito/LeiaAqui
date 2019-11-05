@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,13 +22,17 @@ import com.example.leiaaqui.DAO.EmprestimoDAO;
 import com.example.leiaaqui.DAO.LivrosDAO;
 import com.example.leiaaqui.EmprestimoRealizadoActivity;
 import com.example.leiaaqui.MainActivity;
+import com.example.leiaaqui.MaskEditUtil;
 import com.example.leiaaqui.Model.CategoriaLeitoresModel;
 import com.example.leiaaqui.Model.CategoriaLivrosModel;
 import com.example.leiaaqui.Model.ClienteModel;
 import com.example.leiaaqui.Model.EmprestimoModel;
 import com.example.leiaaqui.Model.LivroModel;
 import com.example.leiaaqui.R;
+import com.google.android.material.textfield.TextInputLayout;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -41,6 +46,8 @@ public class EmprestimoActivity extends AppCompatActivity {
     TextView multa;
     Spinner categoria;
     Spinner cliente;
+    EditText previsao_devolucao;
+    TextInputLayout previsao_devolucao_layout;
     Button emprestar;
     TextView errorSpinnerCategoria;
     TextView errorSpinnerCliente;
@@ -67,6 +74,8 @@ public class EmprestimoActivity extends AppCompatActivity {
 
         /* Inicializar variavéis */
         init();
+        initMask();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         /* Inicializar banco de dados */
@@ -141,12 +150,21 @@ public class EmprestimoActivity extends AppCompatActivity {
         errorSpinnerCategoria = (TextView) categoria.getSelectedView();
         errorSpinnerCliente = (TextView) cliente.getSelectedView();
         recycler = (RecyclerView) findViewById(R.id.rv_livros);
+        previsao_devolucao = (EditText) findViewById(R.id.et_emprestimo_previsao);
+        previsao_devolucao_layout = (TextInputLayout) findViewById(R.id.emprestivo_previsao_layout);
+    }
+
+    /* Metodo para inicializar o mask */
+    public void initMask() {
+        previsao_devolucao.addTextChangedListener(MaskEditUtil.mask(previsao_devolucao, previsao_devolucao_layout, MaskEditUtil.FORMAT_DATE, true));
     }
 
     /* Método para validar os campos */
     public void validarCampos() {
         if (cliente.getSelectedItem() == null) {
             Toast.makeText(getApplicationContext(), R.string.escolherCliente, Toast.LENGTH_SHORT).show();
+        } else if(previsao_devolucao.getText().length() == 0 || previsao_devolucao.getText().length() < 10 || !isValidDate(previsao_devolucao.getText().toString())) {
+            previsao_devolucao_layout.setError("Você precisa inserir a previsão de devolução do livro.");
         } else {
             emprestarLivro();
         }
@@ -191,7 +209,7 @@ public class EmprestimoActivity extends AppCompatActivity {
                 EmprestimoModel emprestimo = new EmprestimoModel();
                 emprestimo.setClienteId(clienteSelecionado.getId());
                 emprestimo.setCodigoLivro(livroSelecionado.getCodigo());
-                emprestimo.setPrevisaoDevolucao(diasEmprestimo.getText().toString());
+                emprestimo.setPrevisaoDevolucao(previsao_devolucao.getText().toString());
                 emprestimo.setDataRetirada(dataAtual);
                 emprestimoDAO.insert(emprestimo);
 
@@ -200,6 +218,22 @@ public class EmprestimoActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), R.string.erro_emprestar_livro, Toast.LENGTH_SHORT).show();
             e.printStackTrace();
+        }
+    }
+
+    /* Metodo para validar a data */
+    public static boolean isValidDate(String pDateString) {
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        format.setLenient(false);
+
+        try {
+            Date date = format.parse(pDateString);
+            if(new Date().before(date)) {
+                return false;
+            }
+            return true;
+        } catch (ParseException e) {
+            return false;
         }
     }
 

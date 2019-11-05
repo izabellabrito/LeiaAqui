@@ -51,16 +51,13 @@
 
     <TextView
         android:id="@+id/tv_categoria_livros_maximo_dias"
-        android:layout_width="339dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="333dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
         android:text="@string/numero_dias_maximo_categoria"
         android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_deletar_categoria_livros"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_categoria_livros_multa" />
 

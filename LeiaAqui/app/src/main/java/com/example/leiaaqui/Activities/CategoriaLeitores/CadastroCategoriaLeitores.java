@@ -80,11 +80,11 @@ public class CadastroCategoriaLeitores extends AppCompatActivity {
     /* Método para validar os campos */
     public void validarCampos() {
         if(categoria_leitor_codigo.getText().length() == 0) {
-            layout_codigo.setError("Você precisa inserir a categoria");
+            layout_codigo.setError("Você precisa inserir a categoria do leitor.");
         } else if (categoria_leitor_descricao.getText().length() == 0) {
-            layout_descricao.setError("Você precisa inserir a descrição da categoria.");
+            layout_descricao.setError("Você precisa inserir a descrição da categoria do leitor..");
         } else if (categoria_leitor_dias.getText().length() == 0) {
-            layout_dias.setError("Você precisa inserir o número de dias.");
+            layout_dias.setError("Você precisa inserir o número de dias que esse leitor pode emprestar uma obra.");
         } else {
             if(edicao) {
                 editar();

@@ -16,61 +16,117 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
-    <LinearLayout
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_emprestimo_livro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/livro_selecionado"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/tv_emprestimo_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/data_retirada"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/tv_emprestimo_previsao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/previsao_devolucao"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/tv_emprestimo_multa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/multa"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tv_previsao_devolucao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/previsao_devolucao"
+        android:textSize="15sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emprestivo_previsao_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/tv_emprestimo_livro"
-            android:layout_width="365dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="30dp"
-            android:text="@string/livro_selecionado" />
-        <TextView
-            android:id="@+id/tv_emprestimo_data"
-            android:layout_width="370dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="30dp"
-            android:text="@string/data_retirada" />
-        <TextView
-            android:id="@+id/tv_emprestimo_previsao"
-            android:layout_width="370dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="30dp"
-            android:text="@string/previsao_devolucao" />
-        <TextView
-            android:id="@+id/tv_emprestimo_multa"
-            android:layout_width="370dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/multa" />
-    </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        android:layout_below="@id/tv_previsao_devolucao"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_emprestimo_previsao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/previsao_devolucao"
+            android:inputType="date"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/tv_emprestimo_cliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/escolha_cliente"
-        android:textSize="18sp"
-        android:layout_alignParentLeft="true"
+        android:layout_below="@id/emprestivo_previsao_layout"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:layout_below="@id/card"/>
+        android:layout_marginRight="20dp"
+        android:text="@string/escolha_cliente"
+        android:textSize="15sp" />
+
     <TextView
         android:id="@+id/tv_escolher_categoria"
         android:layout_width="wrap_content"
@@ -78,11 +134,11 @@
         android:layout_below="@id/tv_emprestimo_cliente"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
         android:layout_marginTop="20dp"
-        android:textSize="15sp"
-        android:text="@string/categoria" />
+        android:text="@string/categoria"
+        android:textSize="14sp" />
     <Spinner
         android:id="@+id/spinner_emprestimo_cliente_categoria"
         android:layout_width="180dp"
@@ -97,6 +153,7 @@
         android:layout_marginRight="20dp"
         android:layout_toEndOf="@+id/tv_escolher_categoria"
         android:layout_toRightOf="@+id/tv_escolher_categoria" />
+
     <TextView
         android:id="@+id/tv_escolher_nome"
         android:layout_width="wrap_content"
@@ -104,11 +161,11 @@
         android:layout_below="@id/tv_escolher_categoria"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
         android:layout_marginTop="15dp"
-        android:textSize="15sp"
-        android:text="@string/nome" />
+        android:text="@string/nome"
+        android:textSize="14sp" />
 
     <Spinner
         android:id="@+id/spinner_emprestimo_cliente_nome"

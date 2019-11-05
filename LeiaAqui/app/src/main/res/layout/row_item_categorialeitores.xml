@@ -40,14 +40,13 @@
 
     <TextView
         android:id="@+id/tv_categoria_leitores_maximo_dias"
-        android:layout_width="349dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
+        android:layout_width="317dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/numero_dias_maximo_emprestimo"
         android:textSize="15sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_deletar_categoria_leitores"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_categoria_leitores_descricao" />
 

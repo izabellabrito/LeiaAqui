@@ -82,13 +82,13 @@ public class CadastroCategoriaLivros extends AppCompatActivity {
     /* Método para validar os campos */
     public void validarCampos() {
         if(categoria_livro_codigo.getText().length() == 0) {
-            layout_codigo.setError("Você precisa inserir a categoria");
+            layout_codigo.setError("Você precisa inserir a categoria do livro.");
         } else if (categoria_livro_descricao.getText().length() == 0) {
-            layout_descricao.setError("Você precisa inserir a descrição da categoria.");
+            layout_descricao.setError("Você precisa inserir a descrição da categoria do livro.");
         } else if (categoria_livro_dias.getText().length() == 0) {
-            layout_dias.setError("Você precisa inserir o número de dias.");
+            layout_dias.setError("Você precisa inserir o número de dias que esse livro pode ficar emprestado.");
         } else if (categoria_livro_multa.getText().length() == 0) {
-            layout_multa.setError("Você precisa inserir a multa.");
+            layout_multa.setError("Você precisa inserir o valor da multa por atraso.");
         } else {
             if(edicao) {
                 editar();

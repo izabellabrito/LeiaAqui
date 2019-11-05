@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     /* Método para validar os campos */
     public void validarCampos() {
         if(usuario.getText().length() == 0) {
-            usuario_layout.setError("Você inserir um usuário.");
+            usuario_layout.setError("Você precisa inserir um usuário.");
         } else if (senha.getText().length() == 0) {
             senha_layout.setError("Você precisa inserir uma senha.");
         } else {

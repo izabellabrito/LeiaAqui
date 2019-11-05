@@ -96,31 +96,20 @@ public class EmprestadosFragment extends Fragment {
         textView.setVisibility(View.VISIBLE);
     }
 
-    public void obtemEmprestados() {
-        try {
-            emprestados = emprestimoDAO.getEmprestimos();
-            if(emprestados != null) {
-                adapter = new EmprestadosAdapter(emprestados, getContext());
-                recycler.setAdapter(adapter);
-
-                textView.setVisibility(View.GONE);
-            }
-        } catch(Exception e) {
-            Toast.makeText(getContext(), "Ocorreu um erro", Toast.LENGTH_SHORT).show();
-            e.printStackTrace();
-        }
-    }
-
     /* Método para retornar os livros emprestados com base na categoria selecionada */
     public void filtrar(String codigo) {
         try {
             emprestados = emprestimoDAO.getEmprestimoByCategoria(codigo);
-            if(emprestados.size() > 0) {
-                adapter = new EmprestadosAdapter(emprestados, getContext());
-                recycler.setAdapter(adapter);
-                textView.setVisibility(View.GONE);
+            adapter = new EmprestadosAdapter(emprestados, getContext());
+            recycler.setAdapter(adapter);
+            if(emprestados != null) {
+                if(emprestados.size() > 0) {
+                    textView.setVisibility(View.GONE);
+                } else {
+                    textView.setVisibility(View.VISIBLE);
+                }
             } else {
-                textView.setVisibility(View.VISIBLE);
+                Toast.makeText(getContext(), R.string.erro_obter_dados, Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             Toast.makeText(getContext(), R.string.erro_obter_dados, Toast.LENGTH_SHORT).show();

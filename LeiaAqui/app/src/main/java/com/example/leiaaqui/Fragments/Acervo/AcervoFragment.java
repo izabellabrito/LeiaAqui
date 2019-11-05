@@ -15,17 +15,13 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
-
 import com.example.leiaaqui.Adapters.AcervoAdapter;
 import com.example.leiaaqui.AppDataBase;
 import com.example.leiaaqui.DAO.LivrosDAO;
 import com.example.leiaaqui.Model.LivroModel;
 import com.example.leiaaqui.R;
-import com.example.leiaaqui.Servicos.ServicosInterface;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

@@ -52,7 +52,7 @@ public class CategoriaLivrosAdapter extends RecyclerView.Adapter<CategoriaLivros
         holder.codigo.setText("Código da categoria: " + categorias.get(position).getCodCategoria());
         holder.descricao.setText("Descrição da categoria: " + categorias.get(position).getDescricaoCategoria());
         holder.multa.setText("Multa por atraso: " + categorias.get(position).getMultaAtraso());
-        holder.numMaximoDias.setText("Número de dias que esse livro pode ficar emprestado: " + categorias.get(position).getNumDiasEmprestimo());
+        holder.numMaximoDias.setText("Dias que esse livro pode ficar emprestado: " + categorias.get(position).getNumDiasEmprestimo());
 
         /* Evento ao clicar no botao deletar de um item da lista */
         holder.deletar.setOnClickListener(new View.OnClickListener() {

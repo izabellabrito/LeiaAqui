@@ -115,11 +115,11 @@ public class CadastroLivrosActivity extends AppCompatActivity {
         } else if (livro_isbn.getText().length() == 0) {
             layout_isbn.setError("Você precisa inserir o isbn do livro.");
         } else if (livro_numeroEdicao.getText().length() == 0) {
-            layout_numeroEdicao.setError("Você precisa inserir a numero de edição do livro.");
+            layout_numeroEdicao.setError("Você precisa inserir o número de edição do livro.");
         } else if (livro_palavrasChave.getText().length() == 0) {
             layout_palavrasChave.setError("Você precisa inserir as palavras-chaves do livro.");
         } else if (livro_numeroPaginas.getText().length() == 0) {
-            layout_palavrasChave.setError("Você precisa inserir a quantidade de páginas do livro.");
+            layout_numeroPaginas.setError("Você precisa inserir a quantidade de páginas do livro.");
         } else if(livro_categoria.getSelectedItem() == null) {
             Toast.makeText(getApplicationContext(), R.string.escolherCategoria, Toast.LENGTH_SHORT).show();
             return;

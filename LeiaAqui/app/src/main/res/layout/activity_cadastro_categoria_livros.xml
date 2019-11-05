@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
+                android:textColorHint="#fff"
                 android:layout_marginRight="30dp"
                 app:errorEnabled="true">
                 <com.google.android.material.textfield.TextInputEditText
@@ -32,6 +33,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/codigoCategoria"
+                    android:textColor="#fff"
+                    android:backgroundTint="#fff"
+                    android:inputType="number"
                     android:textSize="15sp"/>
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
@@ -39,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
+                android:textColorHint="#fff"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
                 app:errorEnabled="true">
@@ -47,6 +52,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/descricaoCategoria"
+                    android:textColor="#fff"
+                    android:backgroundTint="#fff"
                     android:textSize="15sp"/>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -132,7 +139,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/multa"
-            android:inputType="number"
+            android:inputType="numberSigned"
             android:textSize="15sp"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton

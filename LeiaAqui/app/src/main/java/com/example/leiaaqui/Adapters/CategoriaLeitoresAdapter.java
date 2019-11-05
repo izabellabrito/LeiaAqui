@@ -50,7 +50,7 @@ public class CategoriaLeitoresAdapter extends RecyclerView.Adapter<CategoriaLeit
     public void onBindViewHolder(@NonNull CategoriaLeitoresViewHolder holder, final int position) {
         holder.codigo.setText("Código da categoria: " + categorias.get(position).getCodigoCategoria());
         holder.descricao.setText("Descrição da categoria: " + categorias.get(position).getDescricao());
-        holder.numDias.setText("Numero de dias que esse leitor pode emprestar um livro: " + categorias.get(position).getDiasEmprestimo());
+        holder.numDias.setText("Dias que esse leitor pode emprestar um livro: " + categorias.get(position).getDiasEmprestimo());
 
         /* Evento ao clicar no botao deletar de um item da lista */
         holder.deletar.setOnClickListener(new View.OnClickListener() {

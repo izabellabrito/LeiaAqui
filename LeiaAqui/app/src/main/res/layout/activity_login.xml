@@ -10,15 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         app:cardBackgroundColor="#254E70">
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:background="@drawable/logo"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginRight="100dp"
-            android:layout_marginEnd="100dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/logo"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.textfield.TextInputLayout

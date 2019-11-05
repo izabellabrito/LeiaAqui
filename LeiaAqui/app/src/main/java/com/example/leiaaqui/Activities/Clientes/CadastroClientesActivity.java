@@ -130,7 +130,7 @@ public class CadastroClientesActivity extends AppCompatActivity {
         } else if (cliente_cpf.getText().length() == 0 || cliente_cpf.length() < 14) {
             layout_cpf.setError("Você precisa inserir o cpf do cliente.");
         } else if (cliente_endereco.getText().length() == 0) {
-            layout_endereco.setError("Você precisa inserir o endereço.");
+            layout_endereco.setError("Você precisa inserir o endereço do cliente.");
         } else if (cliente_dataNascimento.getText().length() == 0 || cliente_dataNascimento.getText().length() < 10 || !isValidDate(cliente_dataNascimento.getText().toString())) {
             layout_dataNascimento.setError("Você precisa a data de nascimento do cliente.");
         } else if (cliente_email.getText().length() == 0) {
@@ -138,7 +138,7 @@ public class CadastroClientesActivity extends AppCompatActivity {
         } else if (cliente_celular.length() == 0 || cliente_celular.length() < 16) {
             layout_celular.setError("Você precisa inserir o telefone do cliente.");
         } else if (cliente_categoria.getSelectedItem() == null) {
-            Toast.makeText(getApplicationContext(), R.string.escolherCliente, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.escolherCategoria, Toast.LENGTH_SHORT).show();
             return;
         } else {
             if (edicao) {

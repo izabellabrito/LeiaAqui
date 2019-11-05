@@ -37,12 +37,15 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="30dp"
+                        android:textColorHint="#fff"
                         app:errorEnabled="true">
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/cadastro_cliente_nome"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/nome"
+                            android:textColor="#fff"
+                            android:backgroundTint="#fff"
                             android:textSize="15sp"/>
                     </com.google.android.material.textfield.TextInputLayout>
                     <com.google.android.material.textfield.TextInputLayout
@@ -52,12 +55,15 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="20dp"
+                        android:textColorHint="#fff"
                         app:errorEnabled="true">
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/cadastro_cliente_cpf"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/cpf"
+                            android:textColor="#fff"
+                            android:backgroundTint="#fff"
                             android:inputType="number"
                             android:textSize="15sp" />
                     </com.google.android.material.textfield.TextInputLayout>
@@ -213,6 +219,7 @@
                     android:inputType="phone"
                     android:textSize="15sp" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <TextView
                 android:id="@+id/img_categoria"
                 android:layout_width="wrap_content"
@@ -222,9 +229,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="25dp"
-                android:textSize="15sp"
-                android:text="@string/categoria"/>
+                android:layout_marginTop="17dp"
+                android:text="@string/categoria"
+                android:textSize="15sp" />
+
             <Spinner
                 android:id="@+id/cadastro_cliente_categoria"
                 android:layout_width="match_parent"
@@ -234,7 +242,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_toEndOf="@id/img_categoria"

@@ -30,6 +30,7 @@ public interface EmprestimoDAO {
     @Query("SELECT * FROM emprestimo WHERE clienteId = :clienteId")
     EmprestimoModel getEmprestimoByCliente(Long clienteId);
 
+    // 0 é false
     @Query("SELECT * FROM emprestimo " +
             "INNER JOIN livros ON emprestimo.codigoLivro = livros.codigo " +
             "WHERE livros.codCategoria = :codigo")
@@ -37,4 +38,5 @@ public interface EmprestimoDAO {
 
     @Query("DELETE FROM emprestimo WHERE id = :id")
     int deleteById(Long id);
+
 }

@@ -24,6 +24,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class DevolucaoActivity extends AppCompatActivity {
 
@@ -88,6 +89,7 @@ public class DevolucaoActivity extends AppCompatActivity {
     public void carregaDados() {
         try {
             emprestimo = emprestimoDAO.getEmprestimoById(codigoEprestimo);
+            List este = emprestimoDAO.getEmprestimos();
             if(emprestimo != null) {
                 SimpleDateFormat formataData = new SimpleDateFormat("dd/MM/yyyy");
                 Date date = new Date();
@@ -112,7 +114,7 @@ public class DevolucaoActivity extends AppCompatActivity {
     /* Método para devolver o livro */
     public void devolver() {
         try {
-            emprestimoDAO.deleteById(emprestimo.getId());
+            emprestimoDAO.delete(emprestimo);
             livroSelecionado.setCopias(livroSelecionado.getCopias() + 1);
             livrosDAO.update(livroSelecionado);
 
